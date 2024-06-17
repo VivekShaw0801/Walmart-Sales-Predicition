@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 with st.sidebar:
     selected = option_menu(
         menu_title="Main Menu",
-        options=["Home", "Prediction" , "Feedback" , "Admin"],
+        options=["Home", "Walmart Prediction" , "Feedback Form" , "Admin Login"],
         icons=["house","book","envelope","admin"],
         menu_icon="cast",
         default_index=0,

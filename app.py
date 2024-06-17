@@ -51,7 +51,7 @@ if selected == "Home":
 
     import warnings
     warnings.filterwarnings("ignore")
-
+    logo_url = "https://paymentsnext.com/wp-content/uploads/2017/10/Walmart-logo.png"
     pd.options.display.max_columns=100 # to see columns 
 
     df_store = pd.read_csv('stores.csv') #store data

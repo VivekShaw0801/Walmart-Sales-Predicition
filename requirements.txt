@@ -12,3 +12,4 @@ streamlit
 streamlit-option-menu
 streamlit_chat
 keras
+keras.models

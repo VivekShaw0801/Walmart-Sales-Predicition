@@ -7,7 +7,7 @@ selected = option_menu(
     icons=["house","book","envelope","admin"],
     menu_icon="cast",
     default_index=0,
-    orientation="horizontal",
+    orientation="vertical",
 )
 if selected == "Home":
     import streamlit as st

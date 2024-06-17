@@ -285,8 +285,6 @@ if selected == "Prediction":
             yhat = model.predict(x_input, verbose=0)
             predictions.append(yhat[0][0])
         return predictions[-n_predictions:]
-
-    st.set_page_config(page_title="Prediction!!!", page_icon=":chart_with_upwards_trend:", layout="centered")
     logo_url = "https://e7.pngegg.com/pngimages/686/908/png-clipart-walmart-logo-walmart-logo-advertising-coupon-walmart-vertical-logo-text-retail-thumbnail.png"  # Replace with your logo URL or file path
     st.markdown(f'''
         <div class="header">

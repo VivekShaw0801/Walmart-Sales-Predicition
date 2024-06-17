@@ -316,11 +316,11 @@ st.markdown(
 )
 
 st.markdown(
-    """
+    ""
     Walmart Inc. is an American multinational retail corporation that operates a chain of hypermarkets, discount department stores, and grocery stores. 
     Founded by Sam Walton in 1962, Walmart has grown to become one of the largest companies in the world by revenue. 
     The company is known for its wide range of products at low prices, making it a popular shopping destination for millions of customers.
-    """
+    ""
 )
 
 uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])

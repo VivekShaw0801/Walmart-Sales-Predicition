@@ -51,7 +51,6 @@ if selected == "Home":
 
     import warnings
     warnings.filterwarnings("ignore")
-    logo_url = "https://paymentsnext.com/wp-content/uploads/2017/10/Walmart-logo.png"
     pd.options.display.max_columns=100 # to see columns 
 
     df_store = pd.read_csv('stores.csv') #store data
@@ -108,7 +107,7 @@ if selected == "Home":
 
     train_data = df_week[:int(0.7*(len(df_week)))] 
     test_data = df_week[int(0.7*(len(df_week))):]
-
+    logo_url = "https://paymentsnext.com/wp-content/uploads/2017/10/Walmart-logo.png"
     st.title(":chart_with_upwards_trend: Walmart Prediction EDA")
     st.markdown('<style>div.block-container{padding-top:2rem;}</style>',unsafe_allow_html=True)
 

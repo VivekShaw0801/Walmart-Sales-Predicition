@@ -310,7 +310,7 @@ if selected == "Prediction":
     )
 
     # Main Streamlit app
-    logo_url = "https://paymentsnext.com/wp-content/uploads/2017/10/Walmart-logo.png"
+    logo_url = "https://drive.google.com/file/d/1aXF8z_C9DhUUkr1gwujcK5oM7S8PXDVL/view?usp=sharing"
     st.markdown(f'''
         <div class="header">
             <img src="{logo_url}" width="60" height="60">

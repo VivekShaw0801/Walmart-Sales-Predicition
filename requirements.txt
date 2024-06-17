@@ -1,0 +1,13 @@
+streamlit>=1.26.0
+plotly
+numpy
+pandas
+matplotlib
+seaborn
+datetime
+statsmodels
+scikit-learn
+pmdarima
+streamlit
+streamlit-option-menu
+streamlit_chat

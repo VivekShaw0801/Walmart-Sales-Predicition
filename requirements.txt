@@ -12,7 +12,4 @@ streamlit
 streamlit-option-menu
 streamlit_chat
 keras
-Sequential
-*
-activations
-backend
+keras.api

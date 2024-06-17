@@ -12,4 +12,6 @@ streamlit
 streamlit-option-menu
 streamlit_chat
 keras
+keras.src.activations
 keras.models
+keras.api

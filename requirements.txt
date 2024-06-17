@@ -11,3 +11,7 @@ pmdarima
 streamlit
 streamlit-option-menu
 streamlit_chat
+keras
+keras.models
+keras.layers
+streamlit_navigation_bar

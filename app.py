@@ -107,7 +107,7 @@ if selected == "Home":
 
     train_data = df_week[:int(0.7*(len(df_week)))] 
     test_data = df_week[int(0.7*(len(df_week))):]
-    st.title("🎢 Walmart Prediction EDA")
+    st.title("📈 Walmart Prediction EDA")
     st.markdown('<style>div.block-container{padding-top:2rem;}</style>',unsafe_allow_html=True)
 
     #os.chdir(r"C:\Python312\Walmart Sales")

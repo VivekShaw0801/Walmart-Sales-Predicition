@@ -1,6 +1,6 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
-st.logo("logo.png")
+st.logo("logo.png",icon_image="logo.png")
 st.header(" ")
 selected = option_menu(
     menu_title=None,

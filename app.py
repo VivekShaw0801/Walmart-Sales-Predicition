@@ -491,7 +491,7 @@ if selected == "Feedback":
 
 #Admin Login Check Feesback 
 
-if selected == "Admin":
+if selected == "Admin Login":
     import streamlit as st
     import sqlite3
     import pandas as pd

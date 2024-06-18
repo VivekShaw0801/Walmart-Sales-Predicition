@@ -114,9 +114,28 @@ if selected == "Home":
     st.markdown(f'''
         <div class="header">
             <img src="{logo_url}" width="60" height="60">
-            <h1 class="hover-effect">Walmart Prediction EDA</h1>
+            <h1 class="hover-effect"> Walmart Prediction EDA</h1>
         </div>
         ''', unsafe_allow_html=True)
+    # CSS for hover effect
+    st.markdown(
+        """
+        <style>
+        .hover-effect:hover {
+            color: blue;
+            font-size: 2.5em;
+            transition: 0.3s;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        .header img {
+            margin-right: 20px;
+        }
+        </style>
+        """, unsafe_allow_html=True
+    )
 
     #os.chdir(r"C:\Python312\Walmart Sales")
     df = pd.read_csv("clean_data.csv", encoding = "ISO-8859-1")

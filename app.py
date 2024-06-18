@@ -517,7 +517,7 @@ if selected == "📝 Feedback":
 
 #Admin Login Check Feesback 
 
-if selected == "🔐 Admin Login":
+if selected == "🔐 Admin":
     import streamlit as st
     import sqlite3
     import pandas as pd

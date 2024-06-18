@@ -3,8 +3,8 @@ from streamlit_option_menu import option_menu
 st.logo("logo1.jpg",icon_image="logo1.jpg")
 selected = option_menu(
     menu_title=None,
-    options=["Home", "Prediction", "Feedback","🔐 Admin Login"],
-    icons=["house","book","envelope","🔐"],
+    options=["🏠 Home", "📈 Prediction", "📝 Feedback","🔐 Admin Login"],
+    #icons=["house","book","envelope","🔐"],
     menu_icon="cast",
     default_index=0,
     orientation="horizontal",

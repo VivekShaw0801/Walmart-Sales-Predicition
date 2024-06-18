@@ -1,6 +1,6 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
-logos=st.logo(link="https://static.vecteezy.com/system/resources/previews/011/332/798/non_2x/artificial-intelligence-ai-logo-human-technology-human-digital-robot-tech-icon-design-template-free-vector.jpg",icon_image=None)
+logos=st.logo(LOGO_URL_LARGE,link="https://static.vecteezy.com/system/resources/previews/011/332/798/non_2x/artificial-intelligence-ai-logo-human-technology-human-digital-robot-tech-icon-design-template-free-vector.jpg",icon_image=LOGO_URL_LARGE)
 selected = option_menu(
     menu_title=None,
     options=["Home", "Prediction", "Feedback","Admin Login"],

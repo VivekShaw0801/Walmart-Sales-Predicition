@@ -1,7 +1,7 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
 st.logo("logo.png",icon_image="logo.png")
-st.markdown(f'''<img src={logo.png} alt="Logo" id="logo" style="width: 200px; height: auto;">''')
+st.markdown(f'''<img src={st.logo} style="width: 200px; height: auto;">''')
 selected = option_menu(
     menu_title=None,
     options=["Home", "Prediction", "Feedback","Admin Login"],

@@ -1,6 +1,6 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
-st.logo(link="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Ftags%2Fmachine-learning-logo&psig=AOvVaw2rrl1BwBBumoAf4cmkIipA&ust=1718775851320000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCW4JO55IYDFQAAAAAdAAAAABAE")
+st.logo(link="https://cdn.dribbble.com/userupload/7371616/file/original-e6e239f95524b187c26d11fc1450be5a.jpg?resize=1200x900")
 selected = option_menu(
     menu_title=None,
     options=["Home", "Prediction", "Feedback","Admin Login"],

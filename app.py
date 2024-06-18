@@ -565,20 +565,15 @@ if selected == "Admin Login":
     """, unsafe_allow_html=True)
 
     # Display the contact messages
-    st.title('Contact Messages')
-
+    st.title('Feedback Messages')
     # Fetch the contact messages from the database
     cursor.execute('SELECT * FROM contacts')
     messages = cursor.fetchall()
-
     # Convert the messages to a Pandas DataFrame
     df = pd.DataFrame(messages, columns=['S.No.', 'Name', 'Email', 'Message'])
-
     # Set the 'S.No.' column as the index
     df.set_index('S.No.', inplace=True)
-
     # Display the messages in a table
     st.table(df)
-
     # Close the database connection
     conn.close()

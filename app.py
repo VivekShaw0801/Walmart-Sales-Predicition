@@ -109,7 +109,7 @@ if selected == "Home":
     train_data = df_week[:int(0.7*(len(df_week)))] 
     test_data = df_week[int(0.7*(len(df_week))):]
     #st.title("Walmart Prediction EDA")
-    st.markdown('<style>div.block-container{padding-top:2rem;}</style>',unsafe_allow_html=True)
+    #st.markdown('<style>div.block-container{padding-top:2rem;}</style>',unsafe_allow_html=True)
     logo_url = "https://paymentsnext.com/wp-content/uploads/2017/10/Walmart-logo.png"  # Replace with your logo URL or file path
     st.markdown(f'''
         <div class="header">

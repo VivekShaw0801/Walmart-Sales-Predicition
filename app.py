@@ -4,12 +4,12 @@ st.logo("logo1.jpg",icon_image="logo1.jpg")
 selected = option_menu(
     menu_title=None,
     options=["🏠 Home", "📈 Prediction", "📝 Feedback","🔐 Admin Login"],
-    #icons=["house","book","envelope","🔐"],
+    icons=["🏠","📈","📝","🔐"],
     menu_icon="cast",
     default_index=0,
     orientation="horizontal",
 )
-if selected == "Home":
+if selected == "🏠 Home":
     import streamlit as st
     import plotly.express as px
     import os
@@ -254,7 +254,7 @@ if selected == "Home":
     fig.add_scatter(x=[date_input], y=[pred_value], mode='markers', name='Predicted Value', marker=dict(color='red', size=10))
     st.plotly_chart(fig, use_container_width=True)
     
-if selected == "Prediction":
+if selected == "📈 Prediction":
     st.header("Walmart Sales Prediction using LSTM")
     import streamlit as st
     import pandas as pd
@@ -426,7 +426,7 @@ if selected == "Prediction":
 
 #feedback form
 
-if selected == "Feedback":
+if selected == "📝 Feedback":
     import streamlit as st
     import sqlite3
     import re
@@ -517,7 +517,7 @@ if selected == "Feedback":
 
 #Admin Login Check Feesback 
 
-if selected == "Admin Login":
+if selected == "🔐 Admin Login":
     import streamlit as st
     import sqlite3
     import pandas as pd

@@ -2,8 +2,8 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 selected = option_menu(
-    menu_title="Main Menu",
-    options=["Home", "Prediction", "Feedback","Admin"],
+    menu_title=None,
+    options=["Home", "Prediction", "Feedback","Admin Login"],
     icons=["house","book","envelope","admin"],
     menu_icon="cast",
     default_index=0,

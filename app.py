@@ -108,8 +108,15 @@ if selected == "Home":
 
     train_data = df_week[:int(0.7*(len(df_week)))] 
     test_data = df_week[int(0.7*(len(df_week))):]
-    st.title("📈 Walmart Prediction EDA")
+    st.title("Walmart Prediction EDA")
     st.markdown('<style>div.block-container{padding-top:2rem;}</style>',unsafe_allow_html=True)
+    logo_url = "https://paymentsnext.com/wp-content/uploads/2017/10/Walmart-logo.png"  # Replace with your logo URL or file path
+    st.markdown(f'''
+        <div class="header">
+            <img src="{logo_url}" width="60" height="60">
+            <h1 class="hover-effect">Walmart Prediction EDA</h1>
+        </div>
+        ''', unsafe_allow_html=True)
 
     #os.chdir(r"C:\Python312\Walmart Sales")
     df = pd.read_csv("clean_data.csv", encoding = "ISO-8859-1")

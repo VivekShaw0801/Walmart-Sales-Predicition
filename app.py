@@ -6,25 +6,6 @@ st.markdown(f'''
             <img src="{st.logo}" width="60" height="60">
         </div>
         ''', unsafe_allow_html=True)
-    # CSS for hover effect
-    st.markdown(
-        """
-        <style>
-        .hover-effect:hover {
-            color: blue;
-            font-size: 2.5em;
-            transition: 0.3s;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-        }
-        .header img {
-            margin-right: 20px;
-        }
-        </style>
-        """, unsafe_allow_html=True
-    )
 selected = option_menu(
     menu_title=None,
     options=["Home", "Prediction", "Feedback","Admin Login"],

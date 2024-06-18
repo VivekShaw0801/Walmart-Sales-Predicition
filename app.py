@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 selected = option_menu(
     menu_title=None,
     options=["Home", "Prediction", "Feedback","Admin Login"],
-    icons=["house","book","envelope","admin"],
+    icons=["house","book","envelope","key"],
     menu_icon="cast",
     default_index=0,
     orientation="horizontal",

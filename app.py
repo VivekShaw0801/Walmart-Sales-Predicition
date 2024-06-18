@@ -1,7 +1,6 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
 
-st.write("  ")
 st.header(" ")
 selected = option_menu(
     menu_title=None,

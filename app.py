@@ -3,7 +3,7 @@ from streamlit_option_menu import option_menu
 st.logo("logo.png",icon_image="logo.png")
 st.markdown(f'''
         <div class="header">
-            <img src="{st.logo}" width="60" height="60">
+            <img src="{st.logo("logo.png",icon_image="logo.png")}" width="60" height="60">
         </div>
         ''', unsafe_allow_html=True)
 selected = option_menu(

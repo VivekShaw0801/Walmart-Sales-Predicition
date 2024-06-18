@@ -1,6 +1,6 @@
 import streamlit as st 
 from streamlit_option_menu import option_menu
-
+st.logo("logo.png")
 st.header(" ")
 selected = option_menu(
     menu_title=None,
@@ -230,7 +230,7 @@ if selected == "Home":
     st.plotly_chart(fig, use_container_width=True)
     
 if selected == "Prediction":
-    st.header("Welcome to the Walmart Prediction.")
+    st.header("Walmart Sales Prediction using LSTM")
     import streamlit as st
     import pandas as pd
     import numpy as np
@@ -286,7 +286,7 @@ if selected == "Prediction":
             yhat = model.predict(x_input, verbose=0)
             predictions.append(yhat[0][0])
         return predictions[-n_predictions:]
-    logo_url = "https://e7.pngegg.com/pngimages/686/908/png-clipart-walmart-logo-walmart-logo-advertising-coupon-walmart-vertical-logo-text-retail-thumbnail.png"  # Replace with your logo URL or file path
+    logo_url = "https://paymentsnext.com/wp-content/uploads/2017/10/Walmart-logo.png"  # Replace with your logo URL or file path
     st.markdown(f'''
         <div class="header">
             <img src="{logo_url}" width="60" height="60">

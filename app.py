@@ -351,25 +351,25 @@ if selected == "📈 Prediction":
     sales_data = preprocess_data(sales_data)
     timeseries_data = sales_data['Net_sales']
 
-        X, y = prepare_data(timeseries_data, N_STEPS)
-        X = X.reshape((X.shape[0], X.shape[1], N_FEATURES))
+    X, y = prepare_data(timeseries_data, N_STEPS)
+    X = X.reshape((X.shape[0], X.shape[1], N_FEATURES))
 
-        model = create_and_train_model(X, y)
+    model = create_and_train_model(X, y)
 
-        st.subheader("Historical Sales Proportion by Year")
-        st.plotly_chart(create_pie_chart(sales_data), use_container_width=True)
+    st.subheader("Historical Sales Proportion by Year")
+    st.plotly_chart(create_pie_chart(sales_data), use_container_width=True)
 
-        st.markdown(f'''
-                <div class="header">
-                    <h1 class="hover-effect">Prediction of Yearly Sales Using LSTM</h1>
-                </div>
-                ''', unsafe_allow_html=True)
+    st.markdown(f'''
+            <div class="header">
+                <h1 class="hover-effect">Prediction of Yearly Sales Using LSTM</h1>
+            </div>
+            ''', unsafe_allow_html=True)
 
-        num_years = st.selectbox("Upto which year do you want to predict next?", range(2026, 2035), index=4) - 2024
+    num_years = st.selectbox("Upto which year do you want to predict next?", range(2026, 2035), index=4) - 2024
 
-        next_years = predict_next_years(model, N_STEPS, N_FEATURES, num_years, timeseries_data)
+    next_years = predict_next_years(model, N_STEPS, N_FEATURES, num_years, timeseries_data)
 
-        st.subheader(f"Predictions for the next {num_years} years:")
+    st.subheader(f"Predictions for the next {num_years} years:")
         for i in range(num_years):
             st.write(f"Prediction for year {2025 + i}: {next_years[i]:.2f} in billion U.S. dollars")
 

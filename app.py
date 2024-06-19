@@ -347,11 +347,9 @@ if selected == "📈 Prediction":
         """
     )
 
-    uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
-    if uploaded_file is not None:
-        sales_data = load_data(uploaded_file)
-        sales_data = preprocess_data(sales_data)
-        timeseries_data = sales_data['Net_sales']
+    sales_data = load_data("Walmart_NetSales.csv")
+    sales_data = preprocess_data(sales_data)
+    timeseries_data = sales_data['Net_sales']
 
         X, y = prepare_data(timeseries_data, N_STEPS)
         X = X.reshape((X.shape[0], X.shape[1], N_FEATURES))

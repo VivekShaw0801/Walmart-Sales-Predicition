@@ -370,56 +370,56 @@ if selected == "📈 Prediction":
     next_years = predict_next_years(model, N_STEPS, N_FEATURES, num_years, timeseries_data)
 
     st.subheader(f"Predictions for the next {num_years} years:")
-        for i in range(num_years):
-            st.write(f"Prediction for year {2025 + i}: {next_years[i]:.2f} in billion U.S. dollars")
+    for i in range(num_years):
+        st.write(f"Prediction for year {2025 + i}: {next_years[i]:.2f} in billion U.S. dollars")
 
-        st.success("Prediction completed successfully!")
+    st.success("Prediction completed successfully!")
 
-        years = list(sales_data.index.year) + [year for year in range(sales_data.index.year[-1] + 1, sales_data.index.year[-1] + num_years + 1)]
+    years = list(sales_data.index.year) + [year for year in range(sales_data.index.year[-1] + 1, sales_data.index.year[-1] + num_years + 1)]
 
-        fig = go.Figure()
+    fig = go.Figure()
 
-        all_years = years
-        all_sales = list(sales_data['Net_sales']) + list(next_years)
+    all_years = years
+    all_sales = list(sales_data['Net_sales']) + list(next_years)
 
-        fig.add_trace(go.Bar(x=years[:len(sales_data)], y=sales_data['Net_sales'],
-                            name='Historical Sales',
-                            hovertemplate='Year: %{x}<br>Sales: $%{y:.2f} billion<extra></extra>',
-                            marker_color='blue', opacity=0.6))
+    fig.add_trace(go.Bar(x=years[:len(sales_data)], y=sales_data['Net_sales'],
+                        name='Historical Sales',
+                        hovertemplate='Year: %{x}<br>Sales: $%{y:.2f} billion<extra></extra>',
+                        marker_color='blue', opacity=0.6))
 
-        fig.add_trace(go.Bar(x=years[len(sales_data):], y=next_years,
-                            name='Predicted Sales',
-                            hovertemplate='Year: %{x}<br>Predicted Sales: $%{y:.2f} billion<extra></extra>',
-                            marker_color='orange', opacity=0.6))
+    fig.add_trace(go.Bar(x=years[len(sales_data):], y=next_years,
+                        name='Predicted Sales',
+                        hovertemplate='Year: %{x}<br>Predicted Sales: $%{y:.2f} billion<extra></extra>',
+                        marker_color='orange', opacity=0.6))
 
-        fig.add_trace(go.Scatter(x=years[:len(sales_data)], y=sales_data['Net_sales'],
-                                mode='lines+markers', name='Historical Trend',
-                                line=dict(color='rgba(221,170,221,0.7)'),
-                                hovertemplate='Year: %{x}<br>Sales: $%{y:.2f} billion<extra></extra>'))
+    fig.add_trace(go.Scatter(x=years[:len(sales_data)], y=sales_data['Net_sales'],
+                            mode='lines+markers', name='Historical Trend',
+                            line=dict(color='rgba(221,170,221,0.7)'),
+                            hovertemplate='Year: %{x}<br>Sales: $%{y:.2f} billion<extra></extra>'))
 
-        fig.add_trace(go.Scatter(x=years[len(sales_data):], y=next_years,
-                                mode='lines+markers', name='Predictions',
-                                line=dict(dash='dash', color='red'),
-                                hovertemplate='Year: %{x}<br>Predicted Sales: $%{y:.2f} billion<extra></extra>'))
+    fig.add_trace(go.Scatter(x=years[len(sales_data):], y=next_years,
+                            mode='lines+markers', name='Predictions',
+                            line=dict(dash='dash', color='red'),
+                            hovertemplate='Year: %{x}<br>Predicted Sales: $%{y:.2f} billion<extra></extra>'))
 
-        fig.update_layout(
-            xaxis_title='Year',
-            yaxis_title='Net Sales (in billion U.S. dollars)',
-            hovermode='x unified',
-            barmode='overlay'
-        )
+    fig.update_layout(
+        xaxis_title='Year',
+        yaxis_title='Net Sales (in billion U.S. dollars)',
+        hovermode='x unified',
+        barmode='overlay'
+    )
 
-        fig.add_vline(x=years[len(sales_data)-1] + 0.5, line_dash="dash", line_color="green")
+    fig.add_vline(x=years[len(sales_data)-1] + 0.5, line_dash="dash", line_color="green")
 
-        st.subheader("Sales Forecast Plot")
-        st.plotly_chart(fig, use_container_width=True)
+    st.subheader("Sales Forecast Plot")
+    st.plotly_chart(fig, use_container_width=True)
 
-        st.download_button(
-            label="Download Predicted Sales Data as CSV",
-            data=pd.DataFrame({'Year': years, 'Net Sales': all_sales}).to_csv(index=False),
-            file_name='predicted_sales.csv',
-            mime='text/csv'
-        )
+    st.download_button(
+        label="Download Predicted Sales Data as CSV",
+        data=pd.DataFrame({'Year': years, 'Net Sales': all_sales}).to_csv(index=False),
+        file_name='predicted_sales.csv',
+        mime='text/csv'
+    )
 
 
 #feedback form

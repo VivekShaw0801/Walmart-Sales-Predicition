@@ -45,7 +45,7 @@ if selected == "🏠 Home":
     from statsmodels.tsa.holtwinters import ExponentialSmoothing
     from statsmodels.tsa.stattools import adfuller, acf, pacf
     from statsmodels.tsa.arima_model import ARIMA
-    #from pmdarima.utils import decomposed_plot
+    from pmdarima.utils import decomposed_plot
     from pmdarima.arima import decompose
     from pmdarima import auto_arima
 

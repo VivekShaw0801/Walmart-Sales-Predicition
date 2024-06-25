@@ -11,7 +11,5 @@ pmdarima
 streamlit
 streamlit-option-menu
 streamlit_chat
-keras
-keras.model
 tensorflow
 streamlit_navigation_bar

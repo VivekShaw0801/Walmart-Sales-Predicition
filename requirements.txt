@@ -14,4 +14,3 @@ streamlit_chat
 keras
 tensorflow
 streamlit_navigation_bar
-pip install --upgrade pip

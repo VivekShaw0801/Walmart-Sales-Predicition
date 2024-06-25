@@ -12,4 +12,5 @@ streamlit
 streamlit-option-menu
 streamlit_chat
 tensorflow
+keras
 streamlit_navigation_bar
